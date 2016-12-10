@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://use.fontawesome.com/736a42d473.js"></script>
+    <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+        @import url('http://fonts.googleapis.com/css?family=Roboto');
+        *{
+            font-family: "Roboto","Noto Sans TC"
+        }
+        body,h1,h2,h3,h4,h5,h6,p{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            width: 100%;
+            border: 0;
+            vertical-align: top;
+        }
+        .primary{
+            background-color: #88613f;
+            color: #e6e6e6;
+        }
+        .full-width{
+            width: 100%;
+        }
+        .fixed-width{
+            width: 1200px;
+            margin: auto;
+        }
+        .col-4{
+            width: 280px;
+            margin: 10px;
+            float: left;
+        }
+        .col-2{
+            width: 50%;
+            float: left;
+        }
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        nav .logo{
+            float: left;
+            width: 150px;
+            height: 100px;
+            background-color: #bbb;
+        }
+        nav .menu{
+            float: right;
+        }
+        nav .menu ul{
+            margin: 0;
+            padding: 0;
+        }
+        nav .menu li{
+            float: left;
+            list-style: none;
+        }
+        nav .menu a{
+            display: block;
+            line-height: 100px;
+            margin-left: 30px;
+            text-decoration: none;
+            color:#333;
+            font-size: 14px;
+        }
+        header{
+            background-image: url(img/02.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding-top: 280px;
+            padding-bottom: 280px;
+            text-align: center;
+            color: #fff;    
+        }
+         header .content h1 {
+            font-size: 80px;
+            letter-spacing:20px;
+             color:rgba(0, 0, 0, 0.63)
+      
+        }
+        header .content p {
+            letter-spacing: 2em;
+            color:rgb(41, 41, 41)
+        }
+        #about{
+            padding-top: 120px;
+            padding-bottom: 110px;
+            
+        }
+        #about .title h2{
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 130px;
+            font-size: 45px;
+            letter-spacing: 5px;
+            position: relative;
+        }
+        #about .title h2::before{
+            content: "W";
+            position: absolute;
+            display: block;
+            width: 100%;
+            font-size: 130px;
+            top: -5px;
+            color: rgba(255,255,255,.15)
+            
+        }
+        #about .col-4{
+            text-align: center;
+        }
+        #about .col-4 h3{
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+        #about .col-4 p{
+            font-size: 14px
+        }
+        #about .icon{
+            width: 110px;
+            height: 110px;
+            background-color: rgba(240, 248, 255, 0.03);
+            display: inline-block;
+            line-height: 110px;
+            border-radius: 50%;
+            border: rgba(255,255,255,.05) 2px solid;
+            
+        }
+        #service .col-2{
+            height: 400px;
+/*            background-color: black;*/
+        }
+        #service .wrapper:nth-of-type(1) .col-2:nth-of-type(1){
+            background-color: #111;
+            color: aliceblue;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 0;
+        }
+        #service .wrapper .col-2::before{
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+        }
+        #service .wrapper:nth-of-type(1) .col-2:nth-of-type(1) .content{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 16px;
+            padding-left: 100px;
+            padding-right: 30px;
+        }
+        
+        #service .wrapper .content h3{
+            border-left: 5px solid #007691;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            font-size: 26px;
+            
+        }
+        #service .wrapper .content p{
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+        #service .wrapper .content a{
+            display: inline-block;
+            text-decoration: none;
+            padding: 5px;
+            
+        }
+        #service .wrapper:nth-of-type(1) .col-2:nth-of-type(1) .content a{
+            color: #eee;
+            border: 1px solid #eee;
+        }
+         #service .wrapper:nth-of-type(2) .col-2:nth-of-type(2) .content a{
+            color: #eee;
+            border: 1px solid #eee;
+        }
+        #service .wrapper:nth-of-type(2) .col-2:nth-of-type(1){
+            background-image: url(img/04.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover
+        }
+        #service .wrapper:nth-of-type(2) .col-2:nth-of-type(2){
+            background-color: #434242;
+            color: aliceblue;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 0;
+        }
+        #service .wrapper:nth-of-type(2) .col-2:nth-of-type(2) .content{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 16px;
+            padding-left: 30px;
+            padding-right: 100px;
+        }
+        #service .wrapper:nth-of-type(1) .col-2:nth-of-type(2){
+            background-image: url(img/01.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover
+        }
+    </style>
+</head>
+<body>
+    <nav class="full-width">
+       <div class="fixed-width">
+            <div class="logo"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">GLOBAL SNAP</a></li>
+                    <li><a href="#">CITY</a></li>
+                    <li><a href="#">PEOPLE</a></li>
+                    <li><a href="#">BUSINESS</a></li>
+                    <li><a href="#">FEATURE</a></li>
+                    <li><a href="#">EVENT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="full-width">
+       <div class="content">
+           <h1>CREATIVES</h1>
+           <p>LOVE THE MOON</p>
+       </div>        
+    </header>
+    <div id="about" class="full-width primary clearfix">
+        <div class="fixed-width">
+            <div class="title"><h2>LOVE  THE  MOON</h2></div>
+            <div class="col-4">
+                <div class="icon"><span class="fa fa-rebel " ></span></div>
+                <h3>PSAT</h3>
+                <p>Consectetur nostrum nisi saepe omnis illum debitis magnam, ab tempore.</p>
+            </div>
+            <div class="col-4">
+                <div class="icon"><span class="fa fa-pied-piper " ></span></div>
+                <h3>NEW</h3>
+                <p>Quia tempore corporis incidunt nostrum quod iste totam inventore illo.</p>
+            </div>
+            <div class="col-4">
+                <div class="icon"><span class="fa fa-pagelines " ></span></div>
+                <h3>FEATURE</h3>
+                <p>Aliquam neque voluptate consequatur officia sunt eligendi minus repellendus.</p>
+            </div>
+            <div class="col-4">
+                <div class="icon"><span class="fa fa fa-viadeo " ></span></div>
+                <h3>FOREVER</h3>
+                <p>Neque dolores, temporibus vitae eos voluptate sint ad, necessitatibus! </p>
+            </div>
+        </div>
+    </div>
+    <div id="service" class="full-width">
+        <div class="wrapper">
+            <div class="col-2">
+                <div class="content">
+                     <h3>Before</h3>
+                     <p>Consectetur adipisicing elit. Facere quam dolore, rem iusto, cumque excepturi ad ipsum eveniet velit corporis dicta sapiente hic ut maiores, ducimus adipisci aliquam reiciendis ullam?Lipsum dolor sit amet, consectetur adipisicing elit. Aliquid ab quasi veniam vitae neque delectus tempora sapiente voluptas praesentium.Dolor sit amet, consectetur adipisicing elit.</p>
+                     <a href="#">More...</a>
+                 </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="wrapper">
+            <div class="col-2"></div>
+            <div class="col-2">
+                 <div class="content">
+                     <h3>After</h3>
+                     <p>Lipsum dolor sit amet, consectetur adipisicing elit. Aliquid ab quasi veniam vitae neque delectus tempora sapiente voluptas praesentium. Magni praesentium ex suscipit aspernatur quidem hic accusantium, amet vel error.</p>
+                     <a href="#">More...</a>
+                 </div>
+            </div>
+                
+        </div>
+    </div>
+</body>
+</html>
